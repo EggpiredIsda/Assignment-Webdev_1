@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anakt Coding Tutorial Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="page">
+      <aside class="sidebar" aria-label="Site navigation">
+        <div class="sidebar__top">
+          <div class="user" aria-label="User section">
+            <div class="user__avatar" aria-label="User avatar">
+              <img class="user__img" src="assets/avatar.jpg" alt="User avatar" />
+            </div>
+            <div class="user__meta">
+              <div class="user__name">Jericho B. Quitoras</div>
+              <div class="user__status">Student • Tutorials in progress</div>
+            </div>
+          </div>
+
+          <div class="brand">
+            <div class="brand__badge" aria-hidden="true">CT</div>
+            <div class="brand__text">
+              <div class="brand__title">Anakt Coding Tutorial Hub</div>
+              <div class="brand__subtitle">Web + C fundamentals</div>
+            </div>
+          </div>
+
+          <nav class="nav" aria-label="Primary">
+            <button class="nav__btn is-active" type="button" data-target="home">
+              <span class="nav__icon" aria-hidden="true">⌂</span>
+              <span class="nav__label">
+                <span class="nav__en">Top</span>
+                <span class="nav__jp">トップ</span>
+              </span>
+            </button>
+            <button class="nav__btn" type="button" data-target="web">
+              <span class="nav__icon" aria-hidden="true">🌐</span>
+              <span class="nav__label">
+                <span class="nav__en">Web</span>
+                <span class="nav__jp">ウェブ</span>
+              </span>
+            </button>
+            <button class="nav__btn" type="button" data-target="c">
+              <span class="nav__icon" aria-hidden="true">C</span>
+              <span class="nav__label">
+                <span class="nav__en">C</span>
+                <span class="nav__jp">C言語</span>
+              </span>
+            </button>
+            <button class="nav__btn" type="button" data-target="resources">
+              <span class="nav__icon" aria-hidden="true">⛏</span>
+              <span class="nav__label">
+                <span class="nav__en">Resources</span>
+                <span class="nav__jp">リソース</span>
+              </span>
+            </button>
+            <button class="nav__btn" type="button" data-target="about">
+              <span class="nav__icon" aria-hidden="true">?</span>
+              <span class="nav__label">
+                <span class="nav__en">About</span>
+                <span class="nav__jp">このサイト</span>
+              </span>
+            </button>
+          </nav>
+        </div>
+
+        <div class="sidebar__bottom">
+          <label class="search" aria-label="Search tutorials">
+            <span class="search__label">Search / 検索</span>
+            <input id="searchInput" class="search__input" type="search" placeholder="e.g. flexbox, pointers" />
+          </label>
+
+          <div class="sidebar__hint">
+            Tip: click a tutorial card to open it. / カードをクリックして開く
+          </div>
+        </div>
+      </aside>
+
+      <main id="main" class="main" tabindex="-1">
+        <section class="dashboard" aria-label="Main content">
+          <!-- Main “tutorial window” (changes with left nav) -->
+          <section class="win win--main" data-page="home" aria-label="Tutorials">
+            <div class="win__bar">
+              <div class="win__title">
+                <span class="win__titleMain">TUTORIALS</span>
+                <span class="win__titleSub">Start Here</span>
+              </div>
+              <div class="win__controls" aria-hidden="true">
+                <span class="win__ctl">—</span>
+                <span class="win__ctl">□</span>
+                <span class="win__ctl">×</span>
+              </div>
+            </div>
+            <div class="win__body">
+
+            <article class="post">
+              <div class="post__date">Pick a track</div>
+              <div class="post__body">
+                <p>
+                  Choose <strong>Web</strong> if you want to build sites with HTML/CSS/JavaScript.
+                  Choose <strong>C</strong> if you want fundamentals, memory, and low-level programming skills.
+                </p>
+                <p class="muted">
+                  Use the left menu to switch sections. Use search to quickly find topics.
+                </p>
+              </div>
+            </article>
+
+            <article class="post">
+              <div class="post__date">How lessons work</div>
+              <div class="post__body">
+                <div class="hero">
+                  <div class="hero__img" role="img" aria-label="Tutorial image placeholder">
+                    <div class="hero__caption">
+                      SHORT, PRACTICAL<br />
+                      CODING LESSONS
+                    </div>
+                    <div class="hero__video">
+                      <div class="hero__videoTitle">Tutorial video</div>
+                      <div class="hero__videoFrame">
+                        <video id="tutorialVideo" controls preload="metadata" muted autoplay playsinline>
+                          <source src="assets/tutorial.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="hero__list">
+                    <div class="chip">Read</div>
+                    <div class="chip">Try</div>
+                    <div class="chip">Build</div>
+                    <div class="chip">Review</div>
+                    <div class="chip">Repeat</div>
+                  </div>
+                </div>
+
+                <p class="muted">
+                  Click a card to open the lesson. Each lesson includes a short explanation + starter code you can copy.
+                </p>
+              </div>
+            </article>
+
+            <div class="grid">
+              <button class="card" type="button" data-open-tutorial="web-html-basics" data-tags="web html beginner">
+                <div class="card__kicker">Web Track</div>
+                <div class="card__title">Start: HTML Basics</div>
+                <div class="card__meta">Build page structure and semantic layouts</div>
+              </button>
+              <button class="card" type="button" data-open-tutorial="c-hello" data-tags="c beginner compiler">
+                <div class="card__kicker">C Track</div>
+                <div class="card__title">Start: Hello, C</div>
+                <div class="card__meta">Compile, run, and understand a minimal program</div>
+              </button>
+            </div>
+            </div>
+          </section>
+
+          <section class="win win--main is-hidden" data-page="web" aria-label="Web tutorials">
+            <div class="win__bar">
+              <div class="win__title">
+                <span class="win__titleMain">WEB</span>
+                <span class="win__titleSub">HTML • CSS • JavaScript</span>
+              </div>
+              <div class="win__controls" aria-hidden="true">
+                <span class="win__ctl">—</span>
+                <span class="win__ctl">□</span>
+                <span class="win__ctl">×</span>
+              </div>
+            </div>
+            <div class="win__body">
+              <div class="grid">
+              <button class="card" type="button" data-open-tutorial="web-html-basics" data-tags="web html beginner">
+                <div class="card__kicker">HTML</div>
+                <div class="card__title">HTML Basics</div>
+                <div class="card__meta">Semantic tags, links, images, forms</div>
+              </button>
+              <button class="card" type="button" data-open-tutorial="web-css-layout" data-tags="web css flexbox grid">
+                <div class="card__kicker">CSS</div>
+                <div class="card__title">Layout: Flexbox & Grid</div>
+                <div class="card__meta">Make responsive layouts like real websites</div>
+              </button>
+              <button class="card" type="button" data-open-tutorial="web-js-dom" data-tags="web javascript dom events">
+                <div class="card__kicker">JavaScript</div>
+                <div class="card__title">DOM + Events</div>
+                <div class="card__meta">Buttons, forms, interactivity, UI updates</div>
+              </button>
+            </div>
+            </div>
+          </section>
+
+          <section class="win win--main is-hidden" data-page="c" aria-label="C tutorials">
+            <div class="win__bar">
+              <div class="win__title">
+                <span class="win__titleMain">C</span>
+                <span class="win__titleSub">Fundamentals • Memory</span>
+              </div>
+              <div class="win__controls" aria-hidden="true">
+                <span class="win__ctl">—</span>
+                <span class="win__ctl">□</span>
+                <span class="win__ctl">×</span>
+              </div>
+            </div>
+            <div class="win__body">
+              <div class="grid">
+              <button class="card" type="button" data-open-tutorial="c-hello" data-tags="c beginner compiler">
+                <div class="card__kicker">C</div>
+                <div class="card__title">Hello, C</div>
+                <div class="card__meta">Set up, compile, run, print output</div>
+              </button>
+              <button class="card" type="button" data-open-tutorial="c-functions" data-tags="c functions beginner">
+                <div class="card__kicker">C</div>
+                <div class="card__title">Functions</div>
+                <div class="card__meta">Write reusable code with functions</div>
+              </button>
+              <button class="card" type="button" data-open-tutorial="c-pointers" data-tags="c pointers memory">
+                <div class="card__kicker">C</div>
+                <div class="card__title">Pointers (Intro)</div>
+                <div class="card__meta">Addresses, dereference, arrays (starter)</div>
+              </button>
+            </div>
+            </div>
+          </section>
+
+          <section class="win win--main is-hidden" data-page="resources" aria-label="Resources">
+            <div class="win__bar">
+              <div class="win__title">
+                <span class="win__titleMain">RESOURCES</span>
+                <span class="win__titleSub">Tools and quick references</span>
+              </div>
+              <div class="win__controls" aria-hidden="true">
+                <span class="win__ctl">—</span>
+                <span class="win__ctl">□</span>
+                <span class="win__ctl">×</span>
+              </div>
+            </div>
+            <div class="win__body">
+              <ul class="list">
+              <li><span class="list__label">Editor</span> VS Code / Cursor (recommended)</li>
+              <li><span class="list__label">Browser</span> Chrome/Firefox devtools (Inspect, Console)</li>
+              <li><span class="list__label">Web</span> HTML/CSS/JS reference (MDN)</li>
+              <li><span class="list__label">C</span> gcc/clang + debugger (gdb/lldb)</li>
+              <li><span class="list__label">Git</span> add → commit → push (save your progress)</li>
+            </ul>
+            </div>
+          </section>
+
+          <section class="win win--main is-hidden" data-page="about" aria-label="About">
+            <div class="win__bar">
+              <div class="win__title">
+                <span class="win__titleMain">ABOUT</span>
+                <span class="win__titleSub">What this is</span>
+              </div>
+              <div class="win__controls" aria-hidden="true">
+                <span class="win__ctl">—</span>
+                <span class="win__ctl">□</span>
+                <span class="win__ctl">×</span>
+              </div>
+            </div>
+            <div class="win__body">
+              <p>
+                This site is built with <strong>only 3 files</strong> (HTML/CSS/JS). Add tutorials as cards, store lesson
+                text in <span class="mono">script.js</span>, and keep the layout consistent.
+              </p>
+              <p class="muted">
+                Want the full “desktop” look? Add a wallpaper image at <span class="mono">assets/wallpaper.jpg</span>.
+              </p>
+            </div>
+          </section>
+
+          <!-- Widget windows (always visible, like a desktop) -->
+          <section class="win win--widget win--audio" aria-label="Audio">
+            <div class="win__bar">
+              <div class="win__title">
+                <span class="win__titleMain">AUDIO</span>
+                <span class="win__titleSub">Now Playing</span>
+              </div>
+              <div class="win__controls" aria-hidden="true">
+                <span class="win__ctl">×</span>
+              </div>
+            </div>
+            <div class="win__body">
+              <div class="audio">
+                <div class="audio__cover" aria-hidden="true">
+                  <img class="audio__img" src="assets/audio-icon.jpg" alt="Audio icon" />
+                </div>
+                <div class="audio__meta">
+                  <div class="audio__track">laying “Witch - VIVINOS”</div>
+                  <div class="audio__artist muted">0:39 out of 3:22</div>
+                  <div class="audio__controls" aria-label="Playback controls">
+                    <button type="button" class="audio__btn">◄◄ Prev</button>
+                    <button type="button" class="audio__btn audio__btn--primary">❚❚ Pause</button>
+                    <button type="button" class="audio__btn">Next ►►</button>
+                  </div>
+                </div>
+              </div>
+              <div class="audio__bar" aria-hidden="true">
+                <div class="audio__fill"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="win win--widget win--calendar" aria-label="Calendar">
+            <div class="win__bar">
+              <div class="win__title">
+                <span class="win__titleMain">CALENDAR</span>
+                <span class="win__titleSub" id="calTitle">Month</span>
+              </div>
+              <div class="win__controls" aria-hidden="true">
+                <span class="win__ctl">×</span>
+              </div>
+            </div>
+            <div class="win__body">
+              <div class="cal">
+                <div class="cal__big">
+                  <div class="cal__day" id="calDay">00</div>
+                  <div class="cal__month" id="calMonth">Month</div>
+                </div>
+                <div class="cal__grid" id="calGrid" aria-label="Calendar days"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="win win--widget win--log" aria-label="Log">
+            <div class="win__bar">
+              <div class="win__title">
+                <span class="win__titleMain">LOG</span>
+                <span class="win__titleSub">System</span>
+              </div>
+              <div class="win__controls" aria-hidden="true">
+                <span class="win__ctl">×</span>
+              </div>
+            </div>
+            <div class="win__body">
+              <div class="log mono">
+                <div class="log__row"><span class="log__t">09:12</span> <span class="log__m">Opened tutorials window</span></div>
+                <div class="log__row"><span class="log__t">09:14</span> <span class="log__m">Search index ready</span></div>
+                <div class="log__row"><span class="log__t">09:16</span> <span class="log__m">Loaded Web + C lessons</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="win win--widget win--words" aria-label="Words">
+            <div class="win__bar">
+              <div class="win__title">
+                <span class="win__titleMain">WORDS</span>
+                <span class="win__titleSub">Daily vocab</span>
+              </div>
+              <div class="win__controls" aria-hidden="true">
+                <span class="win__ctl">×</span>
+              </div>
+            </div>
+            <div class="win__body">
+              <div class="words mono">
+                <div class="words__col">
+                  <div>semantic</div>
+                  <div>flexbox</div>
+                  <div>callback</div>
+                  <div>compile</div>
+                </div>
+                <div class="words__col">
+                  <div>pointer</div>
+                  <div>buffer</div>
+                  <div>header</div>
+                  <div>debug</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="win win--widget win--clock" aria-label="World clock">
+            <div class="win__bar">
+              <div class="win__title">
+                <span class="win__titleMain">WORLDCLOCK</span>
+                <span class="win__titleSub">Local</span>
+              </div>
+              <div class="win__controls" aria-hidden="true">
+                <span class="win__ctl">×</span>
+              </div>
+            </div>
+            <div class="win__body">
+              <div class="clock">
+                <div class="clock__zone">
+                  <div class="clock__city">Local</div>
+                  <div class="clock__time" id="clockLocal">00:00:00</div>
+                </div>
+                <div class="clock__zone">
+                  <div class="clock__city">UTC</div>
+                  <div class="clock__time" id="clockUtc">00:00:00</div>
+                </div>
+              </div>
+              <div class="muted" id="clockDate">—</div>
+            </div>
+          </section>
+
+          <section class="win win--widget win--imgA" aria-label="Image window A">
+            <div class="win__bar">
+              <div class="win__title">
+                <span class="win__titleMain">The Witch</span>
+              </div>
+              <div class="win__controls" aria-hidden="true">
+                <span class="win__ctl">×</span>
+              </div>
+            </div>
+            <div class="win__body">
+              <img class="winimg" src="assets/pic-a.jpg" alt="Custom image A" />
+            </div>
+          </section>
+
+          <section class="win win--widget win--imgB" aria-label="Image window B">
+            <div class="win__bar">
+              <div class="win__title">
+                <span class="win__titleMain">Mizi of Anakt Garden</span>
+              </div>
+              <div class="win__controls" aria-hidden="true">
+                <span class="win__ctl">×</span>
+              </div>
+            </div>
+            <div class="win__body">
+              <img class="winimg" src="assets/pic-b.jpg" alt="Custom image B" />
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="tutorialModal" class="modal" aria-label="Tutorial">
+      <form method="dialog" class="modal__chrome">
+        <div class="modal__top">
+          <div class="modal__titleWrap">
+            <div id="modalKicker" class="modal__kicker">Tutorial</div>
+            <h3 id="modalTitle" class="modal__title">Title</h3>
+          </div>
+          <button class="modal__close" value="cancel" aria-label="Close">✕</button>
+        </div>
+
+        <div id="modalBody" class="modal__body"></div>
+
+        <div class="modal__bottom">
+          <button class="modal__btn" value="cancel">Close</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
